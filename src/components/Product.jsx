@@ -2,30 +2,50 @@ import { SectionHeading } from './Problem';
 
 const FEATURES = [
   {
-    title: 'One patient-owned record',
-    body: 'Every visit, lab, prescription, and imaging result consolidated into a single longitudinal record the patient controls.',
-    icon: 'card',
+    title: 'Full-source aggregation',
+    body: 'A single mobile app aggregating 100% of a patient’s medical records — regardless of source.',
+    icon: 'layers',
   },
   {
-    title: 'Instant, verified access',
-    body: 'A secure digital card and QR credential gives providers real-time access at check-in — no faxes, no phone trees.',
-    icon: 'bolt',
+    title: 'Patient-centered',
+    body: 'The patient sits at the center of their own medical information universe — not the health system.',
+    icon: 'target',
   },
   {
-    title: 'Interoperable by design',
-    body: 'Built on FHIR and HL7 standards with direct integrations into major EHRs, labs, and pharmacy networks.',
+    title: 'FHIR-native interoperability',
+    body: 'Built on a FHIR-native architecture connecting directly to hospitals, labs, pharmacies, and payers.',
     icon: 'link',
   },
   {
-    title: 'Privacy & consent first',
-    body: 'Patients grant and revoke access per provider, per visit, with a full audit trail. HIPAA-aligned architecture from day one.',
+    title: 'Biometric security & consent',
+    body: 'Biometric-secured access with granular, per-organization consent controls the patient fully owns.',
     icon: 'shield',
+  },
+  {
+    title: 'AI clinical insights',
+    body: 'AI-powered clinical insights with source attribution on every assertion — nothing is a black box.',
+    icon: 'spark',
+  },
+  {
+    title: 'Emergency access',
+    body: 'Break-glass emergency access to critical data, with offline capability when it matters most.',
+    icon: 'bolt',
   },
 ];
 
 const ICONS = {
-  card: (
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z M3 10h18 M7 15h4" />
+  layers: (
+    <>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l9 5-9 5-9-5 9-5z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 13l9 5 9-5" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="12" cy="12" r="0.5" fill="currentColor" />
+    </>
   ),
   bolt: <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />,
   link: (
@@ -34,6 +54,12 @@ const ICONS = {
   shield: (
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" />
   ),
+  spark: (
+    <>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" />
+    </>
+  ),
 };
 
 export default function Product() {
@@ -41,12 +67,12 @@ export default function Product() {
     <section id="product" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
-          eyebrow="The Product"
-          title="A single card. A complete medical history."
-          body="MedCard unifies clinical, pharmacy, and diagnostic data into one patient-owned profile — accessible in seconds by the people you choose to share it with."
+          eyebrow="The Solution"
+          title="MedCard: the patient-controlled health record platform."
+          body="A single mobile app that aggregates every medical record — regardless of source — with the patient at the center of their own medical information universe."
         />
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
             <div
               key={f.title}

@@ -2,29 +2,40 @@ import { SectionHeading } from './Problem';
 
 const MILESTONES = [
   {
-    period: 'H1 2025',
-    title: 'Founding & discovery',
-    body: 'Company founded. Clinical and regulatory advisory board established. 40+ provider and patient interviews completed.',
+    period: 'Q1–Q2 2026',
+    title: 'Foundation',
+    items: ['Identity (SSRAA)', 'Consent Ledger', 'FHIR Substrate', '1st QHIN'],
     status: 'done',
   },
   {
-    period: 'H2 2025',
-    title: 'Platform build',
-    body: 'Core record-consolidation engine and patient app in development. First EHR integration partnerships in progress.',
+    period: 'Q3–Q4 2026',
+    title: 'Aggregation',
+    items: ['Record Engine Live', '3 QHIN Routes', '5 Payer APIs', 'Beta (2.5K users)'],
     status: 'active',
   },
   {
-    period: 'H1 2026',
-    title: 'Pilot launch',
-    body: 'Pilot program with launch health system partners. HIPAA-aligned security review and compliance certification.',
+    period: 'Q1–Q2 2027',
+    title: 'Intelligence',
+    items: ['AI Insights', 'Emergency Access', 'HITRUST Cert', 'SOC 2 Type II'],
     status: 'upcoming',
   },
   {
-    period: 'H2 2026',
-    title: 'Commercial rollout',
-    body: 'General availability across initial regional markets. Employer benefits partnerships go live.',
+    period: 'Q3–Q4 2027',
+    title: 'Scale',
+    items: ['GA Launch', 'CMS-0057-F Live', 'Analytics Revenue', 'Research Licensing'],
     status: 'upcoming',
   },
+];
+
+const KEY_METRICS = [
+  { value: '≥85%', label: 'of U.S. hospital beds connected' },
+  { value: '≥80%', label: 'of ambulatory encounters covered' },
+  { value: '<10 min', label: 'median time to complete record assembly' },
+  { value: '≥95%', label: 'data completeness per source' },
+  { value: '≥99.5%', label: 'duplicate-collapse accuracy' },
+  { value: '100%', label: 'of data access events logged' },
+  { value: '≤60 sec', label: 'consent revocation propagation' },
+  { value: 'Zero', label: 'critical findings on HIPAA/HITRUST/SOC 2' },
 ];
 
 const STATUS_STYLES = {
@@ -38,9 +49,8 @@ export default function Roadmap() {
     <section id="traction" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Roadmap"
-          title="Building deliberately toward a 2026 launch."
-          body="An early-stage company moving quickly from validation to pilot to commercial scale. Milestones and metrics below will be updated as we progress."
+          eyebrow="24-Month Execution Timeline"
+          title="Clear gates. Staged conformance. Named accountability."
         />
 
         <div className="mt-16 grid gap-6 md:grid-cols-4">
@@ -56,15 +66,34 @@ export default function Roadmap() {
               </div>
               <div className="mt-4 border-l-2 border-navy-900/10 pl-5">
                 <h3 className="font-display text-base font-semibold text-navy-900">{m.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy-800/65">{m.body}</p>
+                <ul className="mt-2 space-y-1">
+                  {m.items.map((item) => (
+                    <li key={item} className="text-sm leading-relaxed text-navy-800/65">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-14 rounded-2xl border border-dashed border-navy-900/15 bg-sand-50 p-6 text-sm text-navy-800/60">
-          <span className="font-semibold text-navy-800/80">Note:</span> traction metrics (LOIs, pilot
-          partners, waitlist size) will be added here as they become available.
+        <p className="mt-10 text-sm text-navy-800/50">
+          Gate-based: no module development without substrate conformance validation.
+        </p>
+
+        <div className="mt-16 rounded-2xl bg-navy-900 p-8 lg:p-10">
+          <h3 className="font-display text-lg font-semibold text-white">
+            Key Success Metrics <span className="text-white/40">(end of 2027)</span>
+          </h3>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {KEY_METRICS.map((m) => (
+              <div key={m.label}>
+                <div className="font-display text-2xl font-semibold text-teal-300">{m.value}</div>
+                <div className="mt-1 text-xs leading-snug text-white/55">{m.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

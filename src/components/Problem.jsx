@@ -1,19 +1,19 @@
 const PAIN_POINTS = [
   {
-    title: 'Fragmented records',
-    body: 'The average patient’s history is scattered across 5+ disconnected provider systems, with no single source of truth.',
+    title: 'Fragmented by design',
+    body: 'Records are scattered across hospitals, labs, pharmacies, and payers — with no unified view of a patient’s complete medical history.',
   },
   {
-    title: 'Costly duplication',
-    body: 'Missing records drive an estimated $25B+ a year in unnecessary, duplicate testing and imaging in the US alone.',
+    title: 'Stuck in the fax era',
+    body: 'Transferring records between providers still relies on faxes and one-off portal logins — slow, manual, and error-prone.',
   },
   {
-    title: 'Dangerous gaps in care',
-    body: 'Emergency and urgent care teams routinely treat patients without allergy, medication, or history data — raising real clinical risk.',
+    title: 'No patient control',
+    body: 'Patients have no meaningful control over who can access their own medical data, or when.',
   },
   {
-    title: 'Patients locked out',
-    body: 'Patients rarely have a usable, portable copy of their own health data — despite owning the legal right to it.',
+    title: 'No incentive to change',
+    body: 'Incumbent health systems have limited incentive to interoperate — lock-in benefits them, not patients.',
   },
 ];
 
@@ -23,7 +23,7 @@ export default function Problem() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="The Problem"
-          title="Health records were built for institutions, not patients."
+          title="Patients are locked out of their own medical data."
           body="Every provider, pharmacy, and payer keeps its own version of the truth. The patient — the one person who touches every part of their own care — is left without a complete picture."
         />
 

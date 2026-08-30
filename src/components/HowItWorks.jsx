@@ -3,34 +3,34 @@ import { SectionHeading } from './Problem';
 const STEPS = [
   {
     n: '01',
-    title: 'Connect',
-    body: 'Patients link existing providers, pharmacies, and payers in minutes through secure, consented data pulls.',
+    title: 'Record Aggregation',
+    body: 'Multi-source ingestion from hospitals, labs, pharmacies, and payers. Probabilistic matching plus clinical deduplication. ≥95% data completeness.',
   },
   {
     n: '02',
-    title: 'Consolidate',
-    body: 'MedCard normalizes and reconciles records into one clean, chronological medical history — no duplicate or conflicting entries.',
+    title: 'AI Clinical Intelligence',
+    body: 'Plain-language summaries, medication interactions, and care gaps — every assertion cited to its source.',
   },
   {
     n: '03',
-    title: 'Carry',
-    body: 'A digital MedCard, wallet pass, and QR credential travel with the patient — ready for any provider, anywhere.',
+    title: 'Emergency Access',
+    body: 'Break-glass retrieval of critical data (allergies, meds, conditions). Offline-capable, with post-hoc consent disclosure.',
   },
   {
     n: '04',
-    title: 'Control',
-    body: 'Patients decide exactly what is shared, with whom, and for how long — and can revoke access instantly.',
+    title: 'Patient Control',
+    body: 'Granular, per-organization consent. Revocation propagates in ≤60 seconds. Patients audit every access event.',
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="bg-sand-100 py-24 lg:py-32">
+    <section className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
-          eyebrow="How It Works"
-          title="From scattered records to one trusted card."
-          body="A simple, consent-driven flow that takes patients from fragmented history to a single verified credential."
+          eyebrow="Core Product Capabilities"
+          title="Four pillars, built to federal-grade metrics."
+          body="Not aspirational targets — the specific, measurable thresholds MedCard is engineered to meet."
         />
 
         <div className="relative mt-16 grid gap-8 md:grid-cols-4">
