@@ -15,18 +15,19 @@ export default function Hero() {
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-teal-300 uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-            Seed-Stage &middot; Digital Health
+            Series A &middot; Digital Health
           </div>
 
           <h1 className="text-balance font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
-            Every patient&rsquo;s medical history,
-            <span className="text-teal-300"> one secure card away.</span>
+            Patient-controlled,
+            <span className="text-teal-300"> national health records.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-            MedCard 2026 is building the patient-owned health record — a single,
-            portable, always up-to-date medical card that puts patients in control
-            and gives providers instant, verified access when it matters most.
+            MedCard aggregates 100% of a patient&rsquo;s medical records — regardless
+            of source — into a single, biometric-secured app. The patient sits at
+            the center of their own medical information universe, not the health
+            system.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -45,9 +46,9 @@ export default function Hero() {
           </div>
 
           <div className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
-            <Stat value="$4.9T" label="US healthcare spend" />
-            <Stat value="30%" label="Records inaccessible at point of care" />
-            <Stat value="2026" label="Target launch" />
+            <Stat value="330M" label="US population addressable" />
+            <Stat value="$12–15M" label="Series A raise" />
+            <Stat value="Q4 2027" label="Target GA launch" />
           </div>
         </div>
 

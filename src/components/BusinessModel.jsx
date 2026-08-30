@@ -2,24 +2,19 @@ import { SectionHeading } from './Problem';
 
 const STREAMS = [
   {
-    title: 'Health system & payer licensing',
-    body: 'SaaS subscriptions for hospital networks and insurers to reduce duplicate testing and improve care coordination.',
-    tag: 'B2B2C',
-  },
-  {
-    title: 'Employer & benefits partnerships',
-    body: 'Per-employee-per-month pricing bundled into employer health benefits and wellness platforms.',
+    title: 'Employer & Payer Analytics',
+    body: 'De-identified population insights for benefits design and care optimization.',
     tag: 'B2B',
   },
   {
-    title: 'Premium patient subscription',
-    body: 'Optional consumer tier for family record management, travel-ready records, and priority data portability.',
-    tag: 'B2C',
+    title: 'Research Data Licensing',
+    body: 'Opt-in patient data licensed for pharmaceutical and medical device research.',
+    tag: 'B2B',
   },
   {
-    title: 'Data interoperability API',
-    body: 'Usage-based API access for EHR vendors, labs, and pharmacy networks integrating with the MedCard network.',
-    tag: 'Platform',
+    title: 'Premium Consumer Features',
+    body: 'Advanced AI insights, plus integration with wearables and preventive-health tools.',
+    tag: 'B2C',
   },
 ];
 
@@ -29,11 +24,11 @@ export default function BusinessModel() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Business Model"
-          title="Multiple durable revenue streams, anchored in B2B2C distribution."
-          body="MedCard reaches patients through the institutions they already trust — then deepens engagement directly with consumers over time."
+          title="Revenue streams built on trust, not data sale."
+          body="MedCard monetizes de-identified insights and opt-in research access — never a patient’s raw record without their consent."
         />
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {STREAMS.map((s) => (
             <div key={s.title} className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy-900/8">
               <span className="inline-flex w-fit items-center rounded-full bg-teal-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-teal-700">
