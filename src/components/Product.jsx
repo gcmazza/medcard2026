@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { SectionHeading } from './Problem';
+import DemoModal from './DemoModal';
 
 const FEATURES = [
   {
@@ -63,14 +65,27 @@ const ICONS = {
 };
 
 export default function Product() {
+  const [demoOpen, setDemoOpen] = useState(false);
+
   return (
     <section id="product" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="The Solution"
-          title="MedCard: the patient-controlled health record platform."
-          body="A single mobile app that aggregates every medical record — regardless of source — with the patient at the center of their own medical information universe."
-        />
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading
+            eyebrow="The Solution"
+            title="MedCard: the patient-controlled health record platform."
+            body="A single mobile app that aggregates every medical record — regardless of source — with the patient at the center of their own medical information universe."
+          />
+          <button
+            onClick={() => setDemoOpen(true)}
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-navy-800 hover:shadow-md"
+          >
+            See the Demo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 3l14 9-14 9V3z" />
+            </svg>
+          </button>
+        </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
@@ -91,6 +106,8 @@ export default function Product() {
           ))}
         </div>
       </div>
+
+      <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </section>
   );
 }
